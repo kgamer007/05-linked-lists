@@ -1,44 +1,12 @@
+[![Build Status](https://travis-ci.org/kgamer007/05-linked-lists.svg?branch=master)](https://travis-ci.org/kgamer007/05-linked-lists)
+
 ![cf](http://i.imgur.com/7v5ASc8.png) lab 05 - Linked List Data Structure
 ====
 
-## To Submit this Assignment
-  * fork this repository and work in a branch called `lab-05`
-  * submit a pull request to your forked repository
-  * Set up Travis CI on your forked repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+This program follows a list data structure that locates a node down a single linked list
 
-## Requirements  
-#### Configuration  
-  <!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include  
-  * **README.md** -- with a documentation about your lab
-  * **.gitignore** -- with a robust .gitignore
-  * **.eslintrc** -- with the class .eslintrc file
-  * **.eslintignore** -- with the class .eslintignore
-  * **.package.json** -- with all dependencies and dev-dependencies
-  * **lib/** -- directory for holding your programs helper modules
-  * **__test__/** -- directory for holding your programs unit and integration tests
+To access the module you will need chain LinkedList with the desired function.
 
-#### Testing  
-  * write at least three test assertions for each method of your Linked List class
-  * organize your tests into appropriate describe/it blocks for test output readability
+.insertAtHead(value) takes in one parameter that inserts the value at the begining of an array.
 
-####  Documentation  
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
-
-#### Feature Tasks  
-  * implement a `LinkedList` class which will use a `Node` class that you have also defined
-  * implement a `pop()` on the LinkedList prototype
-	* implement a `remove(value)` on the prototype
-  * implement `map()` _or_ `reduce()` as pure methods on the LinkedList prototype
-  * in comments above or within each function, note the Big-O time AND space complexity
-
-## Bonus Points (not eligible on resubmits):
-  * 1pt: test your Node class as well with at least two test assertions, one for a successful instantiation and another for unsuccessful instantiation
-  * 2pts: refactor your Linked List class so that `push()` and `pop()` both have a constant / O(1) run time
+.find, .pop, .map, .remove are other methods that we use to manipulate to search specific nodes.
