@@ -56,11 +56,11 @@ describe('testing linked list', () => {
     testList.insertAtEnd(7);
 
     expect(testList.find(5)).toBeInstanceOf(Node);
+    expect(testList.find(5).next.value).toEqual(6);
     expect(testList.find(9)).toBeNull();
   });
 
   test('#remove', () => {
-    const testList = new LinkedList();
     testList.insertAtEnd(5);
     expect(testList.head.value).toEqual(5);
 
@@ -68,25 +68,28 @@ describe('testing linked list', () => {
     expect(testList.head.value).toEqual(5);
     expect(testList.head.next.value).toEqual(6);
 
-    testList.remove(6);
-    expect(testList.head.next.value).toEqual(5);
+    testList.insertAtEnd(7);
+    expect(testList.head.value).toEqual(5);
+    expect(testList.head.next.value).toEqual(6);
+    expect(testList.head.next.next.value).toEqual(7);
+
+    testList.remove(7);
+    expect(testList.head.next.value).toEqual(6);
   });
 
   test('#map', () => {
-    const testList = new LinkedList();
     const callback = x => x / 2;
     testList.insertAtEnd(4);
-    testList.insertAtEnd(5);
     testList.insertAtEnd(6);
+    testList.insertAtEnd(8);
 
     testList.map(callback);
     expect(testList.head.value).toEqual(2);
-    expect(testList.head.next.value).toBeNull();
-    expect(testList.head.next.next.value).toEqual(3);
+    expect(testList.head.next.value).toEqual(3);
+    expect(testList.head.next.next.value).toEqual(4);
   });
 
   test('#pop', () => {
-    const testList = new LinkedList();
     testList.pop();
     expect(testList.pop()).toBeNull();
   });

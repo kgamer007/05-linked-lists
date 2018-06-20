@@ -7,6 +7,6 @@ describe('node.js', () => {
     const node = new Node('test1');
 
     expect(node.value).toEqual('test1');
-    expect(node.next).toBeNaN();
+    expect(node.next).toBeNull();
   });
 });
